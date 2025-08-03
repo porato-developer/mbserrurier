@@ -225,7 +225,6 @@ export default function HomePage() {
     emailService
       .sendEmail("service_8y86ehn", "template_05ghzsj", formData, "Efa0kcbHyLUSc52eZ", "YW2h_TTeA2UfxVyJ3pw74")
       .then(() => {
-        alert("Votre demande de devis a été envoyée ! Nous vous recontacterons rapidement.")
         setFormData({
           name: "",
           phone: "",
@@ -237,7 +236,6 @@ export default function HomePage() {
       })
       .catch((error) => {
         console.error("Erreur lors de l'envoi du devis:", error)
-        alert("Une erreur est survenue lors de l'envoi de votre demande. Veuillez réessayer plus tard.")
       });
 
   }
