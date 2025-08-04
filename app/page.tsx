@@ -223,7 +223,7 @@ export default function HomePage() {
     e.preventDefault()
     console.log("Demande de devis:", formData)
     emailService
-      .sendEmail("service_8y86ehn", "template_05ghzsj", formData, "Efa0kcbHyLUSc52eZ", "YW2h_TTeA2UfxVyJ3pw74")
+      .sendEmail("service_bzxd274", "template_05ghzsj", formData, "Efa0kcbHyLUSc52eZ", "YW2h_TTeA2UfxVyJ3pw74")
       .then(() => {
         setFormData({
           name: "",
