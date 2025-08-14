@@ -33,86 +33,208 @@ import {
 function TestimonialsCarousel() {
   const [currentIndex, setCurrentIndex] = useState(0)
 
+
   const testimonials = [
-    {
-      text: "Intervention très rapide après avoir claqué ma porte. Le serrurier était là en 20 minutes et a ouvert sans abîmer la serrure. Service impeccable et prix très honnête !",
-      name: "Marie Dubois",
-      initials: "MD",
-      location: "Paris 15ème • Il y a 2 semaines",
-    },
-    {
-      text: "Installation d'une serrure multipoints parfaitement réalisée. Travail soigné, explications claires et garantie fournie. Je recommande vivement MB Serrurier !",
-      name: "Jean-Luc Martin",
-      initials: "JM",
-      location: "Paris 8ème • Il y a 1 mois",
-    },
-    {
-      text: "Professionnel, ponctuel et efficace. Ma serrure était complètement bloquée, il a trouvé la solution rapidement. Excellent rapport qualité-prix !",
-      name: "Sophie Petit",
-      initials: "SP",
-      location: "Paris 11ème • Il y a 3 semaines",
-    },
-    {
-      text: "Clé cassée dans la serrure un dimanche soir, j'ai appelé MB Serrurier. Intervention en 25 minutes, problème résolu sans casser la serrure. Tarif transparent et service de qualité !",
-      name: "Antoine Lefebvre",
-      initials: "AL",
-      location: "Boulogne-Billancourt • Il y a 1 semaine",
-    },
-    {
-      text: "Installation d'un système de contrôle d'accès pour notre entreprise. Travail impeccable, équipe professionnelle et suivi parfait. Je recommande sans hésitation !",
-      name: "Catherine Rousseau",
-      initials: "CR",
-      location: "Neuilly-sur-Seine • Il y a 3 jours",
-    },
-    {
-      text: "Blindage de porte d'entrée réalisé en une matinée. Finitions parfaites, conseils avisés et prix compétitif. Enfin un artisan sur qui on peut compter !",
-      name: "Pierre Durand",
-      initials: "PD",
-      location: "Vincennes • Il y a 5 jours",
-    },
-    {
-      text: "Dépannage d'urgence à 2h du matin après un cambriolage. Arrivé rapidement, sécurisé temporairement puis remplacé la serrure le lendemain. Merci pour votre réactivité !",
-      name: "Émilie Bernard",
-      initials: "EB",
-      location: "Créteil • Il y a 2 semaines",
-    },
-    {
-      text: "Reproduction de clés de sécurité pour tout l'immeuble. Service rapide, clés parfaitement fonctionnelles et prix très correct. Un vrai professionnel !",
-      name: "Michel Garcia",
-      initials: "MG",
-      location: "Levallois-Perret • Il y a 4 jours",
-    },
-    {
-      text: "Changement de toutes les serrures après un déménagement. Conseil personnalisé, installation soignée et garantie fournie. Excellent rapport qualité-prix !",
-      name: "Laure Thomas",
-      initials: "LT",
-      location: "Saint-Denis • Il y a 1 semaine",
-    },
-    {
-      text: "Serrure qui ne fermait plus correctement depuis des mois. Diagnostic précis, réparation efficace en 30 minutes. Enfin une porte qui ferme bien ! Merci !",
-      name: "Julien Blanc",
-      initials: "JB",
-      location: "Montreuil • Il y a 6 jours",
-    },
-    {
-      text: "Installation d'une serrure connectée pour ma maison. Explications claires, paramétrage inclus et formation à l'utilisation. Service complet et moderne !",
-      name: "Nathalie Moreau",
-      initials: "NM",
-      location: "Versailles • Il y a 3 jours",
-    },
-    {
-      text: "Audit sécurité gratuit très complet pour notre local commercial. Recommandations pertinentes et devis détaillé. Nous avons choisi MB Serrurier pour tous les travaux !",
-      name: "David Rodriguez",
-      initials: "DR",
-      location: "Nanterre • Il y a 1 semaine",
-    },
-    {
-      text: "Porte blindée installée avec barre de seuil anti-effraction. Travail de qualité professionnelle, respect des délais et nettoyage après intervention. Parfait !",
-      name: "Sylvie Leroy",
-      initials: "SL",
-      location: "Argenteuil • Il y a 4 jours",
-    },
-  ]
+  {
+    text: "Changement express de cylindre après perte de clés. Intervention dans l'heure et conseils pour améliorer la sécurité de mon appartement.",
+    name: "François Martin",
+    initials: "FM",
+    location: "Paris 4ème • Il y a 1 jour",
+  },
+  {
+    text: "Ouverture de porte claquée en moins de 10 minutes. Très professionnel et sympathique, je garde le numéro pour la prochaine fois.",
+    name: "Amélie Caron",
+    initials: "AC",
+    location: "Saint-Ouen • Il y a 2 jours",
+  },
+  {
+    text: "Pose de verrou supplémentaire sur ma porte de cave. Travail propre, rapide et soigné. Prix raisonnable.",
+    name: "Karim Haddad",
+    initials: "KH",
+    location: "Clichy • Il y a 2 jours",
+  },
+  {
+    text: "Installation d'un système de contrôle d'accès pour notre entreprise. Travail impeccable, équipe professionnelle et suivi parfait. Je recommande sans hésitation !",
+    name: "Catherine Rousseau",
+    initials: "CR",
+    location: "Neuilly-sur-Seine • Il y a 3 jours",
+  },
+  {
+    text: "Installation d'une serrure connectée pour ma maison. Explications claires, paramétrage inclus et formation à l'utilisation. Service complet et moderne !",
+    name: "Nathalie Moreau",
+    initials: "NM",
+    location: "Versailles • Il y a 3 jours",
+  },
+  {
+    text: "Installation d'un judas numérique. Produit de qualité et explications claires sur son fonctionnement.",
+    name: "Isabelle Girard",
+    initials: "IG",
+    location: "Suresnes • Il y a 3 jours",
+  },
+  {
+    text: "Réparation d'une serrure grippée sans remplacement complet. Économie réalisée grâce aux bons conseils du serrurier.",
+    name: "Lucien Meyer",
+    initials: "LM",
+    location: "Pantin • Il y a 3 jours",
+  },
+  {
+    text: "Reproduction de clés de sécurité pour tout l'immeuble. Service rapide, clés parfaitement fonctionnelles et prix très correct. Un vrai professionnel !",
+    name: "Michel Garcia",
+    initials: "MG",
+    location: "Levallois-Perret • Il y a 4 jours",
+  },
+  {
+    text: "Porte blindée installée avec barre de seuil anti-effraction. Travail de qualité professionnelle, respect des délais et nettoyage après intervention. Parfait !",
+    name: "Sylvie Leroy",
+    initials: "SL",
+    location: "Argenteuil • Il y a 4 jours",
+  },
+  {
+    text: "Serrure connectée installée en moins d'une heure, application paramétrée et parfaitement fonctionnelle. Je suis ravi.",
+    name: "Claire Boucher",
+    initials: "CB",
+    location: "Issy-les-Moulineaux • Il y a 4 jours",
+  },
+  {
+    text: "Ouverture de garage bloqué. Travail efficace et sans dégâts. Intervention rapide.",
+    name: "Patrick Gauthier",
+    initials: "PG",
+    location: "Colombes • Il y a 4 jours",
+  },
+  {
+    text: "Pose de serrure haute sécurité pour protéger ma boutique. Travail sérieux et rapide.",
+    name: "Nora Saïdi",
+    initials: "NS",
+    location: "Asnières-sur-Seine • Il y a 4 jours",
+  },
+  {
+    text: "Blindage de porte d'entrée réalisé en une matinée. Finitions parfaites, conseils avisés et prix compétitif. Enfin un artisan sur qui on peut compter !",
+    name: "Pierre Durand",
+    initials: "PD",
+    location: "Vincennes • Il y a 5 jours",
+  },
+  {
+    text: "Réglage de porte blindée qui frottait depuis des mois. Maintenant elle ferme parfaitement.",
+    name: "Olivier Renaud",
+    initials: "OR",
+    location: "Ivry-sur-Seine • Il y a 5 jours",
+  },
+  {
+    text: "Intervention un dimanche matin après cambriolage. Mise en sécurité immédiate et devis clair pour remplacement complet.",
+    name: "Julie Fontaine",
+    initials: "JF",
+    location: "Paris 12ème • Il y a 5 jours",
+  },
+  {
+    text: "Serrure qui ne fermait plus correctement depuis des mois. Diagnostic précis, réparation efficace en 30 minutes. Enfin une porte qui ferme bien ! Merci !",
+    name: "Julien Blanc",
+    initials: "JB",
+    location: "Montreuil • Il y a 6 jours",
+  },
+  {
+    text: "Réparation de serrure de boîte aux lettres. Intervention rapide et soignée.",
+    name: "Samuel Denis",
+    initials: "SD",
+    location: "Bagnolet • Il y a 6 jours",
+  },
+  {
+    text: "Installation d'une barre anti-panique dans notre commerce. Normes respectées et finition impeccable.",
+    name: "Christelle Lambert",
+    initials: "CL",
+    location: "Courbevoie • Il y a 6 jours",
+  },
+  {
+    text: "Clé cassée dans la serrure un dimanche soir, j'ai appelé MB Serrurier. Intervention en 25 minutes, problème résolu sans casser la serrure. Tarif transparent et service de qualité !",
+    name: "Antoine Lefebvre",
+    initials: "AL",
+    location: "Boulogne-Billancourt • Il y a 1 semaine",
+  },
+  {
+    text: "Changement de toutes les serrures après un déménagement. Conseil personnalisé, installation soignée et garantie fournie. Excellent rapport qualité-prix !",
+    name: "Laure Thomas",
+    initials: "LT",
+    location: "Saint-Denis • Il y a 1 semaine",
+  },
+  {
+    text: "Audit sécurité gratuit très complet pour notre local commercial. Recommandations pertinentes et devis détaillé. Nous avons choisi MB Serrurier pour tous les travaux !",
+    name: "David Rodriguez",
+    initials: "DR",
+    location: "Nanterre • Il y a 1 semaine",
+  },
+  {
+    text: "Serrure bloquée après tentative d'effraction. Dépannage immédiat et remplacement dans la foulée.",
+    name: "Thierry Masson",
+    initials: "TM",
+    location: "Paris 18ème • Il y a 1 semaine",
+  },
+  {
+    text: "Blindage de porte d'entrée, excellent rapport qualité-prix. Je recommande vivement.",
+    name: "Hélène Dupuis",
+    initials: "HD",
+    location: "Aubervilliers • Il y a 1 semaine",
+  },
+  {
+    text: "Changement complet de cylindre et reproduction de clés. Service rapide et efficace.",
+    name: "Maxime Charpentier",
+    initials: "MC",
+    location: "Clamart • Il y a 1 semaine",
+  },
+  {
+    text: "Intervention très rapide après avoir claqué ma porte. Le serrurier était là en 20 minutes et a ouvert sans abîmer la serrure. Service impeccable et prix très honnête !",
+    name: "Marie Dubois",
+    initials: "MD",
+    location: "Paris 15ème • Il y a 2 semaines",
+  },
+  {
+    text: "Dépannage d'urgence à 2h du matin après un cambriolage. Arrivé rapidement, sécurisé temporairement puis remplacé la serrure le lendemain. Merci pour votre réactivité !",
+    name: "Émilie Bernard",
+    initials: "EB",
+    location: "Créteil • Il y a 2 semaines",
+  },
+  {
+    text: "Réparation de mécanisme de serrure ancien, évitant un remplacement coûteux.",
+    name: "Sonia Pires",
+    initials: "SP",
+    location: "Villejuif • Il y a 2 semaines",
+  },
+  {
+    text: "Pose d'un verrou supplémentaire sur porte d'entrée. Artisan ponctuel et travail impeccable.",
+    name: "Alain Morel",
+    initials: "AM",
+    location: "Malakoff • Il y a 2 semaines",
+  },
+  {
+    text: "Professionnel, ponctuel et efficace. Ma serrure était complètement bloquée, il a trouvé la solution rapidement. Excellent rapport qualité-prix !",
+    name: "Sophie Petit",
+    initials: "SP",
+    location: "Paris 11ème • Il y a 3 semaines",
+  },
+  {
+    text: "Ouverture de porte blindée sans destruction, vraiment impressionnant !",
+    name: "Fanny Rousseau",
+    initials: "FR",
+    location: "Paris 3ème • Il y a 3 semaines",
+  },
+  {
+    text: "Dépannage de rideau métallique bloqué devant mon commerce. Réactivité au top.",
+    name: "Gérard Lucas",
+    initials: "GL",
+    location: "Montreuil • Il y a 3 semaines",
+  },
+  {
+    text: "Installation d'une serrure multipoints parfaitement réalisée. Travail soigné, explications claires et garantie fournie. Je recommande vivement MB Serrurier !",
+    name: "Jean-Luc Martin",
+    initials: "JM",
+    location: "Paris 8ème • Il y a 1 mois",
+  },
+  {
+    text: "Intervention en urgence un soir de pluie, serrurier souriant et efficace. Serrure réparée rapidement.",
+    name: "Valérie Nguyen",
+    initials: "VN",
+    location: "Meudon • Il y a 1 mois",
+  }
+];
+
 
   const nextTestimonial = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length)
